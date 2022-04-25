@@ -19,7 +19,13 @@ namespace FRB_Farma
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            FormHome frmHome = new FormHome();
+            frmHome.TopLevel = false;
+            frmHome.AutoScroll = true;
+            this.konten.Controls.Clear();
+            this.konten.Controls.Add(frmHome);
+            frmHome.Show();
+            lblActiveMenu.Text = "Home";
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
